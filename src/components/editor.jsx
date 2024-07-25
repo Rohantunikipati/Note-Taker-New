@@ -25,7 +25,7 @@ export default function App({ id = null }) {
         if (Array.isArray(data) && data.length > 0) {
           const note = data[0]; // Get the first item from the array
           console.log("Note Data:", note);
-          return note.NoteContent ? (note.NoteContent) : null;
+          return note.NoteContent ? JSON.parse(note.NoteContent) : null;
         } else {
           return null;
         }

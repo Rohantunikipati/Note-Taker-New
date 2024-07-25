@@ -24,7 +24,7 @@ export async function POST(req, { params }) {
       },
       data: {
         Heading: textHeading,
-        NoteContent: content,
+        NoteContent: JSON.stringify(content),
       },
     });
     return NextResponse.json(Updatednote);
